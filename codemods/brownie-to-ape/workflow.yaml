@@ -1,0 +1,12 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/codemod/codemod/refs/heads/main/schemas/workflow.json
+version: "1"
+nodes:
+  - id: brownie-to-ape-migrate
+    name: Brownie to Ape Framework migration
+    steps:
+      - id: brownie-to-ape-jssg
+        name: "Run brownie-to-ape codemod"
+        js-ast-grep:
+          js_file: scripts/codemod.ts
+          language: python
+          semantic_analysis: workspace
